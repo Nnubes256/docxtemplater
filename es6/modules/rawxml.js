@@ -1,7 +1,7 @@
 const traits = require("../traits.js");
-const { isContent } = require("../doc-utils.js");
+//const { isContent } = require("../doc-utils.js");
 const {
-	throwRawTagShouldBeOnlyTextInParagraph,
+	//throwRawTagShouldBeOnlyTextInParagraph,
 	getInvalidRawXMLValueException,
 } = require("../errors.js");
 
@@ -14,9 +14,9 @@ function getInner({ part, left, right, postparsed, index }) {
 		if (i === index - left - 1) {
 			return;
 		}
-		if (isContent(p)) {
+		/*if (isContent(p)) {
 			throwRawTagShouldBeOnlyTextInParagraph({ paragraphParts, part });
-		}
+		}*/
 	});
 	return part;
 }
